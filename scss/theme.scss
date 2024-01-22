@@ -1,0 +1,18 @@
+
+$blue:    #AAC7D0;
+$orange:  #BB7703;
+$green:   #1F3328;
+$teal:    #3D654F;
+
+$primary: $green;
+$secondary: $teal;
+$warning: $orange;
+$info: $blue;
+$light: #D3DDE0;
+$dark: #33454F;
+
+$font-family-sans-serif:    "Julius Sans One", "Bad Script",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss"
