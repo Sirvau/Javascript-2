@@ -23,15 +23,13 @@
                 class="d-inline-block align-center"
                 alt="Footprint logo linking to home page"
               />
-              <h1 class="d-inline-block h2">Hikes Inspire</h1>
+              <h1 class="d-inline-block h2 primary-font">Hikes Inspire</h1>
             </a>
           </nav>
         </div>
       </div>
     </header>
-    <main
-      class="bg-primary pb-5 pt-5 d-flex justify-content-center align-items-center"
-    >
+    <main class="pb-5 pt-5 d-flex justify-content-center align-items-center">
       <div
         class="container row pt-5 d-flex justify-content-center align-items-start"
       >
@@ -42,7 +40,9 @@
               class="figure-img img-fluid rounded"
               alt="A generic square placeholder image with rounded corners in a figure."
             />
-            <figcaption class="text-center pt-sm-1 m-1 mx-lg-3">
+            <figcaption
+              class="secondary-font image-text h4 text-center pt-sm-1 m-1 mx-lg-3"
+            >
               Search inspiration and post your favourite hikes!
             </figcaption>
           </figure>
@@ -51,7 +51,7 @@
         <div
           class="container bg-light col-11 col-sm-5 col-md-4 col-lg-4 m-3 m-sm-0 pt-5 pb-md-5 text-center d-flex justify-content-center"
         >
-          <form class="pb-lg-5 pt-lg-5">
+          <form action="profile" class="pb-lg-5 pt-lg-5">
             <div
               class="form-group row my-3 d-flex justify-content-center align-center"
             >
@@ -59,9 +59,8 @@
               <div class="col-10 col-sm-11">
                 <input
                   type="email"
-                  pattern=".+@example\.com , .+@example\.no , .+@example\.net, .+@example\.org "
                   required
-                  class="form-control"
+                  class="form-control bg-light"
                   data-toggle="tooltip"
                   data-placement="top"
                   title="A valid e-mail adress must contain @."
@@ -76,8 +75,7 @@
                 <input
                   type="password"
                   minlength="8"
-                  required
-                  class="form-control"
+                  class="form-control bg-light"
                   data-toggle="tooltip"
                   data-placement="top"
                   title=" Your password must be at least 8 characters long."
@@ -88,21 +86,18 @@
             </div>
             <div class="form-group row">
               <div class="p-5">
-                <a href="./html/feed.html"
-                  ><button
-                    type="submit"
-                    class="btn btn-warning col-10 col-sm-11"
-                  >
-                    Log in
-                  </button></a
-                >
-                <p class="my-3">Or</p>
-                <button
+                <input
                   type="submit"
+                  value="Log In"
+                  class="btn btn-warning col-10 col-sm-11"
+                />
+
+                <p class="my-3">Or</p>
+                <input
+                  type="submit"
+                  value="Register"
                   class="btn btn-transparent border-warning text-warning col-10 col-sm-12"
-                >
-                  Register
-                </button>
+                />
               </div>
             </div>
           </form>
