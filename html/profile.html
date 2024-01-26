@@ -3,9 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Profile | Hikes Inspire</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Julius+Sans+One&display=swap"
       rel="stylesheet"
@@ -17,26 +24,67 @@
     <link rel="stylesheet" href="../css/theme.css" />
   </head>
   <body>
-    <header class="bg-secondary container-fluid" id="header">
-      <div class="row d-flex justify-content-between me-3">
-        <div class="col-8 m-2 p-0">
-          <nav class="navbar navbar-light">
-            <a class="navbar-brand text-light" href="../index.html">
-              <img
-                src="../images/mdi_foot-print.png"
-                class="d-inline-block align-center"
-                alt="Footprint logo linking to home page"
-              />
-              <h1 class="primary-font d-inline-block h2">Hikes Inspire</h1>
-            </a>
-          </nav>
+    <header class="bg-secondary container-fluid" id="header-feed-page">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a
+            class="navbar-brand text-light d-flex justify-content-center align-items-center"
+            href="../index.html"
+          >
+            <img
+              src="../images/mdi_foot-print.png"
+              class="d-inline-block align-center"
+              alt="Footprint logo linking to home page"
+            />
+            <h1 class="primary-font uppercase">Hikes Inspire</h1></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item d-flex justify-content-end">
+                <a
+                  class="nav-link text-light"
+                  aria-current="page"
+                  href="../index.html"
+                  >Log Out</a
+                >
+              </li>
+              <li class="nav-item d-flex justify-content-end">
+                <a class="nav-link active text-light" href="./feed.html"
+                  >Feed</a
+                >
+              </li>
+              <li class="nav-item d-flex justify-content-end">
+                <a class="nav-link text-light" href="./profile.html"
+                  >My Profile</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
+      </nav>
     </header>
     <main>
       <section class="text-center pb-3">
         <div class="justify-content-around align-items-center row py-4">
-          <h1 class="col-8 primary-font text-light h2">Mountain-man78</h1>
+          <div class="col-8">
+            <h2 class="primary-font text-light h4">I'm</h2>
+            <h1 class="primary-font text-light">Mountain-man78</h1>
+          </div>
+
           <div class="col-4 col-sm-3 col-md-2 me-4">
             <img
               class="img-thumbnail p-1 rounded-circle rounded-5 rounded-top-0 border-primary border-0"
@@ -68,7 +116,7 @@
         >
           <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
             ><div class="card text-bg-info mb-3">
-              <h2 class="primary-font h6 text-center mt-3 mx-1">
+              <h2 class="primary-font-uppercase h6 text-center mt-3 mx-1">
                 Lofoten Hiking experience
               </h2>
               <div class="card-body">
@@ -81,7 +129,9 @@
           </a>
           <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
             ><div class="card text-bg-info mb-3">
-              <h2 class="primary-font h6 text-center mt-3 mx-1">Trollheimen</h2>
+              <h2 class="primary-font-uppercase h6 text-center mt-3 mx-1">
+                Trollheimen
+              </h2>
               <div class="card-body">
                 <img
                   src="../images/benjamin-davies-CiYenwxBB3U-unsplash.jpg"
@@ -92,7 +142,7 @@
           </a>
           <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
             ><div class="card text-bg-info mb-3">
-              <h2 class="primary-font h6 text-center mt-3 mx-1">
+              <h2 class="primary-font-uppercase h6 text-center mt-3 mx-1">
                 The Majestetic North
               </h2>
               <div class="card-body">
@@ -105,7 +155,7 @@
           </a>
           <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
             ><div class="card text-bg-info mb-3">
-              <h2 class="primary-font h6 text-center mt-3 mx-1">
+              <h2 class="primary-font-uppercase h6 text-center mt-3 mx-1">
                 Lofoten Hiking experience
               </h2>
               <div class="card-body">
@@ -119,7 +169,7 @@
 
           <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
             ><div class="card text-bg-info mb-3">
-              <h2 class="primary-font h6 text-center mt-3 mx-1">
+              <h2 class="primary-font-uppercase h6 text-center mt-3 mx-1">
                 Lofoten Hiking experience
               </h2>
               <div class="card-body">
@@ -132,7 +182,9 @@
           </a>
           <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
             ><div class="card text-bg-info mb-3">
-              <h2 class="primary-font h6 text-center mt-3 mx-1">Trollheimen</h2>
+              <h2 class="primary-font-uppercase h6 text-center mt-3 mx-1">
+                Trollheimen
+              </h2>
               <div class="card-body">
                 <img
                   src="../images/benjamin-davies-CiYenwxBB3U-unsplash.jpg"
@@ -143,7 +195,7 @@
           </a>
           <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
             ><div class="card text-bg-info mb-3">
-              <h2 class="primary-font h6 text-center mt-3 mx-1">
+              <h2 class="primary-font-uppercase h6 text-center mt-3 mx-1">
                 The Majestetic North
               </h2>
               <div class="card-body">
@@ -156,7 +208,7 @@
           </a>
           <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
             ><div class="card text-bg-info mb-3">
-              <h2 class="primary-font h6 text-center mt-3 mx-1">
+              <h2 class="primary-font-uppercase h6 text-center mt-3 mx-1">
                 Lofoten Hiking experience
               </h2>
               <div class="card-body">
@@ -171,7 +223,7 @@
       </section>
       <div class="d-flex justify-content-center mb-5">
         <a
-          href="#header"
+          href="#header-profile-page"
           class="btn btn-primary border-secondary"
           id="btn-to-top"
           >To top <i class="fa-solid fa-angle-up"></i
