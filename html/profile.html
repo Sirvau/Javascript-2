@@ -10,10 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Julius+Sans+One&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/81a562339c.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../css/theme.css" />
   </head>
   <body>
-    <header class="bg-secondary container-fluid">
+    <header class="bg-secondary container-fluid" id="header">
       <div class="row d-flex justify-content-between me-3">
         <div class="col-8 m-2 p-0">
           <nav class="navbar navbar-light">
@@ -29,23 +33,41 @@
         </div>
       </div>
     </header>
-    <main class="container">
-      <section class="bg-warning text-center pb-3">
-        <div class="d-flex justify-content-center align-items-center row">
-          <h1 class="col primary-font text-light h2">My profile</h1>
-          <img
-            class="col img-thumbnail p-1 rounded-circle rounded-5 rounded-top-0 border-primary me-2"
-            src="../images/_d3c92eef-37d0-46ba-ae2f-44e6845a2601.jpg"
-          />
+    <main>
+      <section class="text-center pb-3">
+        <div class="justify-content-around align-items-center row py-4">
+          <h1 class="col-8 primary-font text-light h2">Mountain-man78</h1>
+          <div class="col-4 col-sm-3 col-md-2 me-4">
+            <img
+              class="img-thumbnail p-1 rounded-circle rounded-5 rounded-top-0 border-primary border-0"
+              src="../images/Profile-image-hikes-inspire.jpg"
+            />
+            <a class="btn btn-warning rounded-pill my-3"
+              >Follow <i class="fa-solid fa-plus"></i
+            ></a>
+          </div>
         </div>
-        <div class="d-flex justify-content-start">
-          <h1 class="h6">Followers goes here</h1>
+        <div
+          class="d-flex justify-content-around justify-content-md-end row bg-secondary py-3 pe-md-5"
+        >
+          <a href="#" class="col-6 col-md-2 col-lg-1"
+            ><p class="text-light text-center">529 Followers</p></a
+          >
+          <a href="#" class="col-6 col-md-2 col-lg-1"
+            ><p class="text-light text-center">634 Following</p></a
+          >
         </div>
       </section>
+
       <section class="container my-5">
-        <div class="row">
-          <a href="#" class="d-flex justify-content-center"
-            ><div class="col-8 card text-bg-info mb-3">
+        <h1 class="col primary-font text-light text-center h2 my-5">
+          My Posts
+        </h1>
+        <div
+          class="row d-flex justify-content-center .justify-content-sm-around"
+        >
+          <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
+            ><div class="card text-bg-info mb-3">
               <h2 class="primary-font h6 text-center mt-3 mx-1">
                 Lofoten Hiking experience
               </h2>
@@ -57,8 +79,8 @@
               </div>
             </div>
           </a>
-          <a href="#" class="d-flex justify-content-center"
-            ><div class="col-8 card text-bg-info mb-3">
+          <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
+            ><div class="card text-bg-info mb-3">
               <h2 class="primary-font h6 text-center mt-3 mx-1">Trollheimen</h2>
               <div class="card-body">
                 <img
@@ -68,8 +90,8 @@
               </div>
             </div>
           </a>
-          <a href="#" class="d-flex justify-content-center"
-            ><div class="col-8 card text-bg-info mb-3">
+          <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
+            ><div class="card text-bg-info mb-3">
               <h2 class="primary-font h6 text-center mt-3 mx-1">
                 The Majestetic North
               </h2>
@@ -81,8 +103,59 @@
               </div>
             </div>
           </a>
-          <a href="#" class="d-flex justify-content-center"
-            ><div class="col-8 card text-bg-info mb-3">
+          <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
+            ><div class="card text-bg-info mb-3">
+              <h2 class="primary-font h6 text-center mt-3 mx-1">
+                Lofoten Hiking experience
+              </h2>
+              <div class="card-body">
+                <img
+                  src="../images/tobias-tullius-eJeEz6Paz-o-unsplash.jpg"
+                  class="img-thumbnail"
+                />
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
+            ><div class="card text-bg-info mb-3">
+              <h2 class="primary-font h6 text-center mt-3 mx-1">
+                Lofoten Hiking experience
+              </h2>
+              <div class="card-body">
+                <img
+                  src="../images/john-o-nolan-6f_ANCcbj3o-unsplash.jpg"
+                  class="img-thumbnail"
+                />
+              </div>
+            </div>
+          </a>
+          <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
+            ><div class="card text-bg-info mb-3">
+              <h2 class="primary-font h6 text-center mt-3 mx-1">Trollheimen</h2>
+              <div class="card-body">
+                <img
+                  src="../images/benjamin-davies-CiYenwxBB3U-unsplash.jpg"
+                  class="img-thumbnail"
+                />
+              </div>
+            </div>
+          </a>
+          <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
+            ><div class="card text-bg-info mb-3">
+              <h2 class="primary-font h6 text-center mt-3 mx-1">
+                The Majestetic North
+              </h2>
+              <div class="card-body">
+                <img
+                  src="../images/sami-matias-B8mHassV6Q0-unsplash.jpg"
+                  class="img-thumbnail"
+                />
+              </div>
+            </div>
+          </a>
+          <a href="#" class="col-10 col-sm-5 col-md-4 col-lg-3 my-2"
+            ><div class="card text-bg-info mb-3">
               <h2 class="primary-font h6 text-center mt-3 mx-1">
                 Lofoten Hiking experience
               </h2>
@@ -96,26 +169,14 @@
           </a>
         </div>
       </section>
-
-      <section>
-        <ul class="row d-flex justify-content-center">
-          <li class="col-8">
-            <a href="#">
-              <div class="card text-bg-info mb-3">
-                <h2 class="primary-font h5 text-center mt-3">
-                  Lofoten Hiking experience
-                </h2>
-                <div class="card-body">
-                  <img
-                    src="../images/vidar-nordli-mathisen-2cNh00feVzw-unsplash.jpg"
-                    class="img-thumbnail"
-                  />
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </section>
+      <div class="d-flex justify-content-center mb-5">
+        <a
+          href="#header"
+          class="btn btn-primary border-secondary"
+          id="btn-to-top"
+          >To top <i class="fa-solid fa-angle-up"></i
+        ></a>
+      </div>
     </main>
     <footer class="bg-secondary pt-5 pb-5"></footer>
   </body>
