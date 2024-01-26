@@ -51,11 +51,11 @@
         <div
           class="container bg-light col-11 col-sm-5 col-md-4 col-lg-4 m-3 m-sm-0 pt-5 pb-md-5 text-center d-flex justify-content-center"
         >
-          <form action="profile" class="pb-lg-5 pt-lg-5">
+          <form action="/html/profile.html" class="pb-lg-5 pt-lg-5">
             <div
               class="form-group row my-3 d-flex justify-content-center align-center"
             >
-              <label for="inputEmail3" class="col-form-label"></label>
+              <label for="inputEmail" class="col-form-label"></label>
               <div class="col-10 col-sm-11">
                 <input
                   type="email"
@@ -63,8 +63,8 @@
                   class="form-control bg-light"
                   data-toggle="tooltip"
                   data-placement="top"
-                  title="A valid e-mail adress must contain @."
-                  id="inputEmail3"
+                  title="A valid e-mail adress must contain a @."
+                  id="inputEmail"
                   placeholder="Email"
                 />
               </div>
@@ -75,6 +75,7 @@
                 <input
                   type="password"
                   minlength="8"
+                  required
                   class="form-control bg-light"
                   data-toggle="tooltip"
                   data-placement="top"
