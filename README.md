@@ -64,7 +64,12 @@ To preview the application, use Live Server.
 ## Contributing
 
 Contribute only to agreed tasks.
-For style customisation, edit the SASS files located in the src/scss/ directory. Run command npm run build. The SASS will be compiled into the dist/css directory.
+
+For style customisation, edit the SASS files located in the src/scss/ directory. Run command ```bash
+npm run build
+
+```.
+The SASS will be compiled into the dist/css directory.
 
 When contributing, please open a pull request for code review before merging commits into the main branch.
 
@@ -72,3 +77,4 @@ When contributing, please open a pull request for code review before merging com
 
 [My LinkedIn page](www.linkedin.com/in/siril-olsen-vaular)
 [Mailadress](sirols50984@stud.noroff.no)
+```
