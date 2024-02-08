@@ -71,218 +71,70 @@
         </div>
       </nav>
     </header>
-    <main class="pb-5 pt-5 d-flex justify-content-center align-items-center">
-      <div
-        class="container row pt-5 d-flex justify-content-center align-items-start"
-      >
-        <div class="col-md-6 d-flex justify-content-center">
-          <figure class="figure text-dark bg-light border pb-4 pb-sm-5 pt-sm-2">
-            <img
-              src="./images/collage-hiking-images-with-border.jpeg"
-              class="figure-img img-fluid rounded"
-              alt="A collage of nature images."
-            />
-            <figcaption
-              class="figcaption-font image-text h4 text-center pt-sm-1 m-1 mx-lg-3 lh-base"
-            >
-              Search inspiration and post your favourite hikes!
-            </figcaption>
-          </figure>
-        </div>
-
-        <section id="contact-and-registration-forms">
-          <div class="container-lg my-5">
-            <nav>
-              <div
-                class="nav nav-tabs"
-                id="nav-login-registration-tab"
-                role="tablist"
-              >
-                <button
-                  class="nav-link active text-secondary"
-                  id="nav-login-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#nav-login"
-                  type="button"
-                  role="tab"
-                  aria-controls="nav-login"
-                  aria-selected="true"
+    <main class=" d-flex justify-content-center">
+        <section class="container-lg my-5 d-flex row justify-content-center align-items-center">
+            <figure class="d-flex justify-content-center row text-dark bg-light border pb-4 col-10 col-sm-6 col-lg-5 col-xl-4 me-sm-2 ">
+                <img
+                src="./images/collage-hiking-images-with-border.jpeg"
+                class="figure-img img-fluid rounded"
+                alt="A collage of nature images."
+                />
+                <figcaption
+                class="figcaption-font image-text h4 text-center pt-sm-1 m-1 mx-lg-3 lh-base"
                 >
-                  Log in
-                </button>
-
-                <button
-                  class="nav-link text-light"
-                  id="nav-registration-tab"
-                  data-bs-toggle="tab"
-                  data-bs-target="#nav-registration"
-                  type="button"
-                  role="tab"
-                  aria-controls="nav-registration"
-                  aria-selected="true"
-                >
-                  Register
-                </button>
-              </div>
-            </nav>
-          </div>
-
-          <div class="tab-content" id="content-login-registration">
-            <div
-              class="tab-pane fade show active p-3"
-              id="nav-login"
-              role="tab-panel"
-              aria-labelledby="nav-login-tab"
-            >
-              <div class="row justify-content-center-my-5">
-                <div
-                  class="container bg-light col-lg-6 pt-5 pb-md-5 text-center d-flex justify-content-center"
-                >
-                  <form
-                    action="/profile/"
-                    class="pb-lg-5 pt-lg-5 text-start secondary-font"
-                  >
-                    <h2 class="text-center my-5 primary-font">Log in</h2>
-                    <div
-                      class="form-group row my-3 d-flex justify-content-center align-center"
-                    >
-                      <div class="col-10 col-sm-11">
-                        <label for="inputEmail" class="col-form-label"
-                          >Email</label
-                        >
-                        <input
-                          type="email"
-                          required
-                          class="form-control bg-light mb-3"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="A valid e-mail adress must contain a @."
-                          id="inputEmail"
-                        />
-                        <label for="Password" class="col-form-label"
-                          >Password</label
-                        >
-
-                        <input
-                          type="password"
-                          minlength="8"
-                          required
-                          class="form-control bg-light"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title=" Your password must be at least 8 characters long."
-                          id="Password"
-                        />
+                Search inspiration and post your favourite hikes!
+                </figcaption>
+            </figure>
+            <form action="/profile/" class="bg-light text-start secondary-font col-10 col-sm-5 col-md-5 col-lg-4 col-xl-3 ms-lg-5 ms-sm-2 ">
+                <h2 class="text-center my-2 pt-5 primary-font">Log in</h2>
+                <div class="form-group row my-3 " >
+                    <div class="d-flex justify-content-center align-center">
+                        <label for="login-email" class="col-form-label "
+                        >Email
+                            <input
+                            type="email"
+                            required
+                            class="form-control bg-light mb-3 "
+                            data-toggle="tooltip"
+                            data-placement="top"
+                            title="A valid e-mail adress must contain a @."
+                            id="login-email"/>
+                        </label>
+                    </div>
+                
+                    <div class="d-flex justify-content-center align-center">
+                        <label for="login-password" class="col-form-label"
+                        >Password
+                            <input
+                                type="password"
+                                minlength="8"
+                                required
+                                class="form-control bg-light"
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title=" Your password must be at least 8 characters long."
+                                id="login-password"
+                            />
+                        </label>
+                    </div>
+    
+                    <div class=" form-group row p-5">
+                      <div class="d-flex justify-content-center">
+                        <label for="login-button" class="col-form-label ">
+                            <input
+                            type="submit"
+                            value="Log In"
+                            class="btn btn-warning py-2 px-5"
+                            id="login-button"
+                            />
+                        </label>
+                      </div>
+                      <div class="d-flex justify-content-center">
+                        <a href="/registration/register.html" class="btn btn-outline-warning py-2 px-4 mt-3" role="button">Register</a>
                       </div>
                     </div>
-
-                    <div class="form-group row">
-                      <div class="p-5 d-flex justify-content-center">
-                        <input
-                          type="submit"
-                          value="Log In"
-                          class="btn btn-warning col-10 col-sm-11"
-                        />
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div
-              class="tab-pane fade p-3"
-              id="nav-registration"
-              role="tab-panel"
-              aria-labelledby="nav-registration-tab"
-            >
-              <div class="row justify-content-center-my-5">
-                <div
-                  class="container bg-light col-lg-6 pt-5 pb-md-5 text-center d-flex justify-content-center"
-                >
-                  <form
-                    action="/profile/"
-                    class="pb-lg-5 pt-lg-5 text-start secondary-font"
-                  >
-                    <h2 class="text-center mt-4 primary-font">Register</h2>
-                    <p class="primary-font mb-5 text-secondary">
-                      and join the community
-                    </p>
-                    <div
-                      class="form-group row my-3 d-flex justify-content-center align-center"
-                    >
-                      <div class="col-10 col-sm-11">
-                        <label for="firstname" class="col-form-label"
-                          >Firstname</label
-                        >
-                        <input
-                          type="text"
-                          required
-                          minlength="2"
-                          class="form-control bg-light mb-2"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="Please enter your first name"
-                          id="input-first-name"
-                        />
-                        <label for="lastname" class="col-form-label"
-                          >Lastname</label
-                        >
-                        <input
-                          type="text"
-                          required
-                          minlength="2"
-                          class="form-control bg-light mb-2"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="Please enter your lastname"
-                          id="input-last-name"
-                        />
-
-                        <label for="inputEmail" class="col-form-label"
-                          >Email</label
-                        >
-                        <input
-                          type="email"
-                          required
-                          class="form-control bg-light mb-2"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="A valid e-mail adress must contain a @."
-                          id="inputEmail"
-                        />
-
-                        <label for="Password" class="col-form-label"
-                          >Your Password</label
-                        >
-                        <input
-                          type="password"
-                          minlength="8"
-                          required
-                          class="form-control bg-light"
-                          data-toggle="tooltip"
-                          data-placement="top"
-                          title="Your chosen password must be at least 8 characters long."
-                          id="Password"
-                        />
-                      </div>
-                    </div>
-
-                    <div class="form-group row">
-                      <div class="p-5 d-flex justify-content-center">
-                        <input
-                          type="submit"
-                          value="Log In"
-                          class="btn btn-warning col-10 col-sm-11"
-                        />
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+            </form> 
+        </section>  
     </main>
     <footer class="bg-secondary pt-5 pb-3">
       <div class="social d-flex col justify-content-center mb-5">
