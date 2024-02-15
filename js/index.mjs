@@ -75,8 +75,7 @@ export async function registerUser(name, email, password) {
 }
 
 
-/* 
-  export async function login(email, password) {
+ /*  export async function login(email, password) {
     const response = await fetch(apiV2_BaseUrl + apiV2_AuthUrl + apiV2_LogInUrl, {
         headers: {
             "Content-Type": "application/json"
@@ -96,13 +95,18 @@ export async function registerUser(name, email, password) {
 } 
  */
 
+
  export async function onAuth(event) {
     event.preventDefault();
     const name = event.target.name.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
 
-    registerUser(name, email, password);
+    if (location.pathname.includes("/register")) {
+        await registerUser(name, email, password);
+    }
+
+   /*  registerUser(name, email, password); */
 
    /*  if (event.submitter.dataset.auth === "login") {
         await login(email, password);
