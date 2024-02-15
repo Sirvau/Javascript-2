@@ -1,6 +1,6 @@
-import { apiV2KeyUrl } from "./api/constants.mjs";
+/* import { apiV2KeyUrl } from "./api/constants.mjs"; */
 
- export const apiV2_BaseUrl = "https://v2.api.noroff.no";
+export const apiV2_BaseUrl = "https://v2.api.noroff.dev";
 export const apiV2_AuthUrl = "/auth";
 export const apiV2_RegisterUrl = "/register";
 export const apiV2_LogInUrl = "/login";
@@ -95,6 +95,7 @@ export async function registerUser(name, email, password) {
     throw new Error("Could not login the account");
 } 
  */
+
  export async function onAuth(event) {
     event.preventDefault();
     const name = event.target.name.value;
@@ -103,16 +104,16 @@ export async function registerUser(name, email, password) {
 
     registerUser(name, email, password);
 
-    if (event.submitter.dataset.auth === "login") {
+   /*  if (event.submitter.dataset.auth === "login") {
         await login(email, password);
     } else {
 
-        await register(name, email, password);
-        await login(email, password);
+        await registerUser(name, email, password);
+        await loginUser(email, password);
     }
 
     const posts = await getPosts();
-    console.log(posts);
+    console.log(posts); */
 } 
 
 
