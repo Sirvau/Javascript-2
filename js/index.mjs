@@ -75,7 +75,33 @@ export async function registerUser(name, email, password) {
 }
 
 
- /*  export async function login(email, password) {
+export async function loginUser(email, password) {
+	const response = await fetch(apiV2_BaseUrl + apiV2_AuthUrl + apiV2_LogInUrl, {
+		headers: {
+			"Content-Type": "application/json"
+		},
+		method: "POST",
+		body: JSON.stringify({ email, password })
+	});
+ 
+	// console.log(response);
+ 
+		if (response.ok) {
+			const data = await response.json();
+			const { accessToken, ...profile } = data.data;
+			save("token", accessToken);
+			save("profile", profile);
+			return profile;
+		}
+		throw new Error("Could not login");
+	}
+
+
+
+
+
+
+  /*  export async function login(email, password) {
     const response = await fetch(apiV2_BaseUrl + apiV2_AuthUrl + apiV2_LogInUrl, {
         headers: {
             "Content-Type": "application/json"
@@ -92,8 +118,8 @@ export async function registerUser(name, email, password) {
     }
 
     throw new Error("Could not login the account");
-} 
- */
+}  */
+ 
 
 
  export async function onAuth(event) {

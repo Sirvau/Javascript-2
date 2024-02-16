@@ -1,9 +1,9 @@
-export const apiV2_BaseUrl = "https://v2.api.noroff.no";
+/* export const apiV2_BaseUrl = "https://v2.api.noroff.no";
 export const apiV2_AuthUrl = "/auth";
 export const apiV2_RegisterUrl = "/register";
 export const apiV2_LogInUrl = "/login";
 export const apiV2KeyUrl = "/create-api-key";
-
+ */
  
 
 
