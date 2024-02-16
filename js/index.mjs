@@ -66,7 +66,9 @@ export async function registerUser(name, email, password) {
     console.log(data);
 
     if (response.ok) {
+        window.location.href = "../index.html";
         return data;
+
     }
     throw new Error("Could not register the account");
 }
