@@ -2,7 +2,13 @@ import {apiV2_BaseUrl, apiV2_AuthUrl, apiV2_RegisterUrl} from "../constants.mjs"
 import { authFetch } from "../fetch.mjs";
 
 
-
+/**
+ * 
+ * @param {*} name 
+ * @param {*} email 
+ * @param {*} password 
+ * @returns 
+ */
 
 //Register User
 export async function registerUser(name, email, password) {
