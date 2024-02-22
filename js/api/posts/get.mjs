@@ -1,7 +1,7 @@
 
 import {apiV2_BaseUrl, apiV2_Posts} from "../constants.mjs";
 import { authFetch } from "../fetch.mjs";
-import {mainTag} from "../constants.mjs";
+
 
 
 /**
@@ -25,7 +25,7 @@ export async function getPosts() {
     }
 }
 
-
+ 
 
 export async function displayPosts() {
     try {
@@ -48,10 +48,10 @@ export async function displayPosts() {
                 const postImageAndTagContainer = document.createElement("div");
                 postImageAndTagContainer.classList.add("col-sm-4", "my-2");
 
-                const postImage = document.createElement("img");
+             /*    const postImage = document.createElement("img");
                 postImage.src = post.media.url;
                 postImage.alt = post.media.alt || ""; 
-                postImage.classList.add("img-thumbnail");
+                postImage.classList.add("img-thumbnail"); */
 
                 //Title and body text 
                 const postTitleAndBodyContainer = document.createElement("div");
@@ -81,7 +81,7 @@ export async function displayPosts() {
                 postTitleAndBodyContainer.appendChild(postTitle); 
                 postTitleAndBodyContainer.appendChild(postBodyText);
 
-                postImageAndTagContainer.appendChild(postImage);
+               /*  postImageAndTagContainer.appendChild(postImage); */
 
             });
     
@@ -117,3 +117,4 @@ function displayTopButton() {
         displayTopButton()
 
 
+ 
