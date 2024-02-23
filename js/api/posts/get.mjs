@@ -39,19 +39,26 @@ export async function displayPosts() {
               
                 //Maincontainers
                 const postMainContainer = document.createElement("div");
-                const postSecondMainContainer = document.createElement("div");
-
                 postMainContainer.classList.add("container", "my-5");
+
+                const postSecondMainContainer = document.createElement("a");
+                postSecondMainContainer.href = "#";
                 postSecondMainContainer.classList.add("row", "border", "rounded");
 
                 //Image and tags 
                 const postImageAndTagContainer = document.createElement("div");
                 postImageAndTagContainer.classList.add("col-sm-4", "my-2");
 
-             /*    const postImage = document.createElement("img");
-                postImage.src = post.media.url;
-                postImage.alt = post.media.alt || ""; 
-                postImage.classList.add("img-thumbnail"); */
+                if (post.media && post.media.url) {
+                  
+               
+                    const postImage = document.createElement("img");
+                    postImage.src = post.media.url;
+                    postImage.alt = post.media.alt || ""; 
+                    postImage.classList.add("img-thumbnail");
+                    postImageAndTagContainer.appendChild(postImage);
+
+                }
 
                 //Title and body text 
                 const postTitleAndBodyContainer = document.createElement("div");
@@ -63,7 +70,7 @@ export async function displayPosts() {
 
                 const postBodyText = document.createElement("p");
                 postBodyText.textContent = post.body;
-                postBodyText.classList.add("secondary-font");
+                postBodyText.classList.add("secondary-font", "text-light");
 
                 //Author and follow button
                 const postAuthorAndFollowButtonContainer = document.createElement("div");
@@ -81,7 +88,7 @@ export async function displayPosts() {
                 postTitleAndBodyContainer.appendChild(postTitle); 
                 postTitleAndBodyContainer.appendChild(postBodyText);
 
-               /*  postImageAndTagContainer.appendChild(postImage); */
+              
 
             });
     
