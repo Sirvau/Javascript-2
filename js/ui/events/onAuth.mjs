@@ -1,6 +1,6 @@
    import { registerUser } from "../../api/auth/register.mjs";
    import { loginUser } from "../../api/auth/login.mjs";
-import { getPosts } from "../../api/posts/get.mjs";
+
    
 
    //On Auth Function

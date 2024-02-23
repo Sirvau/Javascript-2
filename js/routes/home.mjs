@@ -1,6 +1,7 @@
 
 import { setAuthListener } from "../ui/listeners/auth.mjs";
-import { displayPosts } from "../api/posts/get.mjs";
+import { displayFeedPosts } from "../content/display-posts.mjs";
+import { displayTopButton } from "../ui/buttons/create.mjs";
 
 
 //Home page function
@@ -9,7 +10,8 @@ import { displayPosts } from "../api/posts/get.mjs";
  */
 
 export async function homepage() {
-    displayPosts();
+    displayFeedPosts();
+    displayTopButton();
 setAuthListener(); 
 
 }
