@@ -90,31 +90,28 @@ export async function displayPosts() {
     }
 }
 
-
 function displayTopButton() {
     try {
-    const mainContainer = document.getElementById("nav-feed");
-                const toTopContainer = document.createElement("div");
-                const toTopLinkButton = document.createElement("a");
-                
-                toTopContainer.classList.add("d-flex", "justify-content-center", "mb-5");
-                toTopContainer.setAttribute("id","to-top-feed-button-container");
+        const mainContainer = document.getElementById("to-top-feed-button-container");
+               
+        const toTopLinkButton = document.createElement("a");
+        toTopLinkButton.href = "#header-feed-page";
+        toTopLinkButton.classList.add("btn", "btn-primary", "border-secondary", "secondary-font");
+        toTopLinkButton.setAttribute("id", "btn-to-top");
+        toTopLinkButton.textContent = "To top ";
 
-                toTopLinkButton.href="#header-feed-page";
-                toTopLinkButton.classList.add("btn btn-primary", "border-secondary", "secondary-font");
-                toTopLinkButton.setAttribute("id","btn-to-top");
+        const arrowIcon = document.createElement("i");
+        arrowIcon.classList.add("fa-solid", "fa-angle-up");
 
-                mainContainer.appendChild(toTopContainer);
-                toTopContainer.appendChild(toTopLinkButton);
-           
-} catch { (error) => {
-    console.error("Error displaying button", error.message);
-
+        mainContainer.appendChild(toTopLinkButton);
+        toTopLinkButton.appendChild(arrowIcon);
+    } catch (error) {
+        console.error("Error displaying button", error.message);
+    }
 }
 
-} }
+displayTopButton();
 
-        displayTopButton()
 
 
  
