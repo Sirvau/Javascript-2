@@ -32,28 +32,27 @@ export async function fetchPostDetail() {
         const singlePostContainer = document.getElementById('single-post-container');
         const singlePostDiv = document.createElement("div");
 
-        const postTitle = document.createElement("h2");
-        postTitle.textContent = singlePost.title;
-        postTitle.classList.add("h4", "primary-font", "text-light", "text-center");
-
         const postImage = document.createElement("img");
-        postImage.src = singlePost.media;
-        postImage.alt = singlePost.media?.alt || "";
+        postImage.src = singlePost.data.media && singlePost.data.media.url;
+        postImage.alt = singlePost.data.media?.alt || "";
         postImage.classList.add("img-thumbnail");
 
+        const postTitle = document.createElement("h2");
+        postTitle.textContent = singlePost.data.title;
+        postTitle.classList.add("h4", "primary-font", "text-light", "text-center");
+
         const postBodyText = document.createElement("p");
-        postBodyText.textContent = singlePost.body;
+        postBodyText.textContent = singlePost.data.body;
         postBodyText.classList.add("secondary-font", "text-light");
 
- 
-        singlePostDiv.appendChild(postTitle);
         singlePostDiv.appendChild(postImage);
+        singlePostDiv.appendChild(postTitle);
         singlePostDiv.appendChild(postBodyText);
         singlePostContainer.appendChild(singlePostDiv);
 
         return singlePostContainer;
     } catch (error) {
-        showError(error.message);
+        Error(error.message);
     }
 }
 
