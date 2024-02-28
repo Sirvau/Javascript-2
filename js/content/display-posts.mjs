@@ -20,12 +20,15 @@ postData.data.forEach(post => {
     const postSecondMainContainer = document.createElement("a");
     postSecondMainContainer.href = "#";
     postSecondMainContainer.classList.add("row", "border", "rounded");
+    postSecondMainContainer.addEventListener("click", () => {
+        window.location.href = `../../feed/post-specific.html?id=${post.id}`;
+    });
 
     // Image and tags 
     const postImageAndTagContainer = document.createElement("div");
     postImageAndTagContainer.classList.add("col-sm-4", "my-2");
 
-    const postImageUrl = post.media && post.media.url ? post.media.url : defaultProfileImageUrl;
+    const postImageUrl = post.media  && post.media.url ? post.media.url : defaultProfileImageUrl;
 
     const postImage = document.createElement("img");
     postImage.src = postImageUrl;
@@ -59,6 +62,8 @@ postData.data.forEach(post => {
 
     postTitleAndBodyContainer.appendChild(postTitle); 
     postTitleAndBodyContainer.appendChild(postBodyText);
+
+    
 });
 
     
@@ -66,7 +71,6 @@ postData.data.forEach(post => {
         console.error("Error displaying posts:", error.message);
     }
 }
-
 
 
 
