@@ -1,5 +1,5 @@
 import { getPosts } from "../api/posts/get.mjs";
-import { setAuthListener } from "../ui/listeners/auth.mjs";
+import { setRegisterAuthListener, setLoginAuthListener } from "../ui/listeners/auth.mjs";
 
 
 //Home page function
@@ -9,6 +9,6 @@ import { setAuthListener } from "../ui/listeners/auth.mjs";
 
 export async function homepage() {
 getPosts();
-setAuthListener(); 
-
+setRegisterAuthListener()
+setLoginAuthListener()
 }
