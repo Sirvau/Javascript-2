@@ -109,7 +109,8 @@
                   type="text"
                   name="name"
                   required
-                  minlength="2"
+                  pattern="^[\w]+$"
+                  maxlength="20"
                   class="form-control bg-light mb-2"
                   data-toggle="tooltip"
                   data-placement="top"
@@ -125,6 +126,7 @@
                   type="email"
                   name="email"
                   required
+                  pattern="^[\w\-.]+@(stud\.)?noroff\.no$"
                   class="form-control bg-light mb-2"
                   data-toggle="tooltip"
                   data-placement="top"
