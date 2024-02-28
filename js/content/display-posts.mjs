@@ -21,7 +21,7 @@ postData.data.forEach(post => {
     postSecondMainContainer.href = "#";
     postSecondMainContainer.classList.add("row", "border", "rounded");
     postSecondMainContainer.addEventListener("click", () => {
-        window.location.href = `../../feed/post-specific.html?id=${post.id}`;
+        window.location.href = `/post/?id=${post.id}`;
     });
 
     // Image and tags 
