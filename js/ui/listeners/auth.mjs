@@ -33,4 +33,3 @@ export function setLoginAuthListener() {
         console.error("Login form not found!");
     }
 }
-
