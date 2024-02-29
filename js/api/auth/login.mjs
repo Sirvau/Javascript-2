@@ -1,27 +1,20 @@
 import {apiV2_BaseUrl, apiV2_AuthUrl, apiV2_LogInUrl} from "../constants.mjs";
 import { save } from "../../storage/localstorage.mjs";
-import { authFetch } from "../fetch.mjs";
+import { headers } from "../headers.mjs";
 
 
 
 
 //Log In User
-
-/**
- * 
- * @param {*} email 
- * @param {*} password 
- * @returns 
- */
-
 export async function loginUser(email, password) {
-	const response = await authFetch(apiV2_BaseUrl + apiV2_AuthUrl + apiV2_LogInUrl, {
+	const response = await fetch(apiV2_BaseUrl + apiV2_AuthUrl + apiV2_LogInUrl, {
+		headers: headers(true),
 		method: "POST",
 		body: JSON.stringify({ email, password })
 	});
- 
-	
- 
+
+
+
 		if (response.ok) {
 			const { accessToken, ...profile } = (await response.json()).data;
 			save("token", accessToken);
