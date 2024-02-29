@@ -1,14 +1,6 @@
 
-/* import { setAuthListener } from "../ui/listeners/auth.mjs"; */
 import { displayFeedPosts } from "../content/display-posts.mjs";
-import { displayTopButton } from "../ui/buttons/create.mjs";
 import { fetchPostDetail } from "../content/display-specific-post.mjs";
-import {setAuthListener} from "../ui/listeners/auth.mjs";
-
-
-
-
-
 
 
 //Home page function
@@ -17,11 +9,6 @@ import {setAuthListener} from "../ui/listeners/auth.mjs";
  */
 
 export async function homepage() {
-    displayFeedPosts();
-    fetchPostDetail()
-
-    displayTopButton();
-    setAuthListener();  
-
-
+displayFeedPosts()
+fetchPostDetail()
 }
