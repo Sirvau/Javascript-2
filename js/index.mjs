@@ -1,5 +1,5 @@
 import { homepage } from "./routes/home.mjs";
-import { updatePost } from "./api/posts/update.mjs";
+/*  import { updatePost } from "./api/posts/update.mjs";  */
 
 /* import { createPost } from "./api/posts/create.mjs"; */
 
@@ -7,8 +7,9 @@ import { updatePost } from "./api/posts/update.mjs";
 homepage();
 
 
- updatePost({
-    id: 639,
-    title: "UPDATED Hello hello",
-    body: "UPDATED My first post",
-}) 
+/*  updatePost({
+    id: 638,
+    title: "UPDATED",
+    body: "UPDATED post",
+    tags: ["tiger"]
+})   */
