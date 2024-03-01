@@ -3,7 +3,9 @@ import { homepage } from "./routes/home.mjs";
 /* import { createPost } from "./api/posts/create.mjs"; */
 /* import { removePost } from "./api/posts/remove.mjs"; */
 
-import * as post from "./api/posts/index.mjs";
+import * as postMethods from "./api/posts/index.mjs";
+
+import { renderPostTemplate } from "./templates/index.mjs";
  
 
 homepage();
@@ -29,3 +31,13 @@ homepage();
 
 //Get POST
  // post.getPost(638).then(console.log);
+
+
+ async function testTemplate() {
+    const posts = await postMethods.getPosts();
+    const post = posts[638]
+    const container = document.querySelector("#nav-feed")
+    renderPostTemplate(post, container);
+ }
+
+ testTemplate();
