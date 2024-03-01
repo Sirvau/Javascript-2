@@ -1,10 +1,14 @@
 import { homepage } from "./routes/home.mjs";
-import { createPost } from "./api/posts/create.mjs";
+import { updatePost } from "./api/posts/update.mjs";
+
+/* import { createPost } from "./api/posts/create.mjs"; */
+
 
 homepage();
 
 
-createPost({
-    title: "Hello hello",
-    body: "My first post"
-})
+ updatePost({
+    id: 639,
+    title: "UPDATED Hello hello",
+    body: "UPDATED My first post",
+}) 
