@@ -1,4 +1,4 @@
-import { getPosts } from "../api/posts/get.mjs";
+/* import { getPosts } from "../api/posts/get.mjs"; */
 import { setAuthListener } from "../ui/listeners/auth.mjs";
 
 
@@ -10,6 +10,6 @@ import { setAuthListener } from "../ui/listeners/auth.mjs";
 
 export async function homepage() {
     setAuthListener(); 
-    getPosts();
+  /*   getPosts(); */
 
 }
