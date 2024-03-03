@@ -20,9 +20,10 @@
     ></script>
     <link rel="stylesheet" href="../css/theme.css" />
     <script defer type="module" src="../js/index.mjs"></script>
+    <script defer type="module" src="../js/routes/single-post.mjs"></script>
   </head>
   <body>
-    <header class="bg-secondary container-fluid" id="header-single-post-page">
+    <header class="bg-secondary container-fluid" id="header-single-post">
       <nav class="navbar navbar-expand-lg col-md-12 col-xxl-11">
         <div class="container-fluid col-md-9 col-lg-12 col-xl-11 col-xxl-10">
           <a
@@ -83,14 +84,9 @@
       </section>
 
       <!-- To top Button -->
-      <div class="d-flex justify-content-center mb-5">
-        <a
-          href="#header-single-post-page"
-          class="btn btn-primary border-secondary secondary-font"
-          id="btn-to-top"
-          >To top <i class="fa-solid fa-angle-up"></i
-        ></a>
-      </div>
+      <div
+        class="d-flex justify-content-center mb-5 to-top-button-container"
+      ></div>
     </main>
     <footer class="bg-secondary pt-5 pb-3">
       <div class="social d-flex col justify-content-center mb-5">
