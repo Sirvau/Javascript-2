@@ -1,22 +1,17 @@
 import { homepage } from "./routes/home.mjs";
+
+
+
+
 /*  import { updatePost } from "./api/posts/update.mjs";  */
 /* import { createPost } from "./api/posts/create.mjs"; */
 /* import { removePost } from "./api/posts/remove.mjs"; */
 
-import * as postMethods from "./api/posts/index.mjs";
-
-import { renderPostTemplate } from "./templates/index.mjs";
- 
 
 homepage();
 
-async function testTemplate() {
-    const posts = await postMethods.getPosts();
-    const container = document.querySelector("#nav-feed");
-    await renderPostTemplate(posts.data, container);
-}
 
-testTemplate();
+
 
 
 /*  async function testTemplate() {
