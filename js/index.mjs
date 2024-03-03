@@ -10,7 +10,27 @@ import { renderPostTemplate } from "./templates/index.mjs";
 
 homepage();
 
-//post.createPost();
+async function testTemplate() {
+    const posts = await postMethods.getPosts();
+    const container = document.querySelector("#nav-feed");
+    await renderPostTemplate(posts.data, container);
+}
+
+testTemplate();
+
+
+/*  async function testTemplate() {
+    const posts = await postMethods.getPosts();
+    const post = posts[638]
+    const container = document.querySelector("#nav-feed")
+   await renderPostTemplate(post, container);
+ }
+
+ testTemplate();
+ */
+
+
+ //post.createPost();
 //post.getPosts();
 //post.getPost();
 //post.updatePost();
@@ -31,13 +51,3 @@ homepage();
 
 //Get POST
  // post.getPost(638).then(console.log);
-
-
- async function testTemplate() {
-    const posts = await postMethods.getPosts();
-    const post = posts[638]
-    const container = document.querySelector("#nav-feed")
-    renderPostTemplate(post, container);
- }
-
- testTemplate();
