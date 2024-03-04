@@ -97,8 +97,9 @@ export async function fetchPostDetail() {
         const singlePost = await response.json();
         console.log("Fetched post data:", singlePost);
 
+        const singlePostMainContainer = document.getElementById('single-post-main-container');
         const singlePostContainer = document.getElementById('single-post-container');
-        const singlePostDiv = document.createElement("div");
+        const theSinglePost = document.getElementById('single-post');
 
         const postImage = document.createElement("img");
         postImage.src = singlePost.data.media && singlePost.data.media.url;
@@ -107,16 +108,17 @@ export async function fetchPostDetail() {
 
         const postTitle = document.createElement("h2");
         postTitle.textContent = singlePost.data.title;
-        postTitle.classList.add("h4", "primary-font", "text-light", "text-center");
+        postTitle.classList.add("h4", "primary-font", "text-light", "text-center", "my-3");
 
         const postBodyText = document.createElement("p");
         postBodyText.textContent = singlePost.data.body;
         postBodyText.classList.add("secondary-font", "text-light");
 
-        singlePostDiv.appendChild(postImage);
-        singlePostDiv.appendChild(postTitle);
-        singlePostDiv.appendChild(postBodyText);
-        singlePostContainer.appendChild(singlePostDiv);
+        theSinglePost.appendChild(postImage);
+        theSinglePost.appendChild(postTitle);
+        theSinglePost.appendChild(postBodyText);
+        singlePostContainer.appendChild(theSinglePost);
+        singlePostMainContainer.appendChild(singlePostContainer);
 
         return singlePostContainer;
     } catch (error) {
