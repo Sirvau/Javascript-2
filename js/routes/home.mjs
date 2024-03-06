@@ -1,6 +1,6 @@
 /* import { getPosts } from "../api/posts/get.mjs"; */
-import { setAuthListener } from "../ui/listeners/auth.mjs";
-import { setCreatePostListener } from "./ui/listeners/createPost.mjs";
+/* import { setAuthListener } from "../ui/listeners/auth.mjs"; */
+ import { setCreatePostListener } from "../ui/listeners/createPost.mjs"; 
 
 
 
@@ -10,9 +10,9 @@ import { setCreatePostListener } from "./ui/listeners/createPost.mjs";
  */
 
 export async function homepage() {
-    setAuthListener(); 
+/*     setAuthListener();  */
   /*   getPosts(); */
-  setCreatePostListener()
+   setCreatePostListener() 
 }
 
 /* 
