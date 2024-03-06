@@ -1,6 +1,6 @@
 
 import {apiV2_BaseUrl ,apiV2_Posts} from "../constants.mjs"
-import { authFetch } from "../fetch.mjs";
+import { authFetch } from "../fetch.mjs"
 
 const action = `${apiV2_Posts}`;
 const method = "POST";
