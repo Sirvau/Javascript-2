@@ -122,7 +122,7 @@ export async function fetchPostDetail() {
 
         const linkToUpdatePost = document.querySelector("#link-to-update-post");
         linkToUpdatePost.addEventListener("click", () => {
-            window.location.href = `../../post/edit/index.html`;
+            window.location.href = `../../post/edit/index.html?id=${singlePost.data.id}`;
         });
 
         const linkToRemovePost = document.querySelector("#link-to-remove-post");
