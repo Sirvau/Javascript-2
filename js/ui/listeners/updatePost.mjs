@@ -1,7 +1,7 @@
 import { updatePost } from "../../api/posts/update.mjs";
 
 
-export function setUpdatePostListener() {
+/* export function setUpdatePostListener() {
     const form = document.querySelector("#update-post");
 
     const url = new URL(location.href);
@@ -20,7 +20,7 @@ export function setUpdatePostListener() {
             updatePost(post)
         })
     }
-}
+} */
 
 export function setUpdatePostFormListener () {
     const form = document.querySelector("#update-post");
@@ -29,7 +29,7 @@ export function setUpdatePostFormListener () {
     const id = url.searchParams.get("id");
 
     if (form) {
-       
+    
         form.addEventListener("submit", (event) => {
             event.preventDefault();
             const form = event.target;
