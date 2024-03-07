@@ -120,8 +120,21 @@ export async function fetchPostDetail() {
         singlePostContainer.appendChild(theSinglePost);
         singlePostMainContainer.appendChild(singlePostContainer);
 
+        const linkToUpdatePost = document.querySelector("#link-to-update-post");
+        linkToUpdatePost.addEventListener("click", () => {
+            window.location.href = `../../post/edit/index.html`;
+        });
+
+        const linkToRemovePost = document.querySelector("#link-to-remove-post");
+        linkToRemovePost.addEventListener("click", () => {
+            window.location.href = "#";
+        })
+
+
         return singlePostContainer;
     } catch (error) {
         Error(error.message);
     }
 }
+
+
