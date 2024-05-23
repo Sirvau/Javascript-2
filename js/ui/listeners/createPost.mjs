@@ -18,11 +18,14 @@ export function setCreatePostFormListener () {
             };
             
     try {
-        await  createPost(post)
-        window.location.pathname = '/posts/';
+        await  createPost(post);
+        window.location.reload((window.location.pathname = "/posts/"))
+      
+     
     } catch (error) {
         console.log('Error creating new post:', error);
     }
+
  });
 }
 }
