@@ -6,7 +6,7 @@ export function setCreatePostFormListener () {
     const form = document.querySelector("#create-post");
 
     if (form) {
-        form.addEventListener("submit", (event) => {
+        form.addEventListener("submit", async (event) => {
             event.preventDefault();
             const form = event.target;
             const formData = new FormData(form);
@@ -17,10 +17,13 @@ export function setCreatePostFormListener () {
                 media: { url: formData.get('media') }
             };
             
-    
-            createPost(post)
-        })
+    try {
+        await  createPost(post)
+        window.location.pathname = '/posts/';
+    } catch (error) {
+        console.log('Error creating new post:', error);
+    }
+ });
 }
-
 }
 
