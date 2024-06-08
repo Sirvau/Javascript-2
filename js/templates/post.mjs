@@ -70,7 +70,7 @@ export async function displayAllPosts() {
 //---------------------------------------------------------------------------------
 
 
-function getPostIdFromQuery() {
+export function getPostIdFromQuery() {
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get("id");
     return id;
