@@ -117,18 +117,23 @@
             role="tabpanel"
             aria-labelledby="nav-feed-tab"
           >
+          <form id="search-form" class="d-flex col-12 col-md-6 input-group" role="search">
+            <input
+              class="form-control me-2 placeholder bg-light secondary-font"
+              name="search"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              <span class="d-none">Search</span>
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+
             <div class="input-group">
-              <input
-                id="search"
-                class="form-control me-2 placeholder bg-light secondary-font"
-                type="search"
-                placeholder="E.g. locations, seasons ..."
-                aria-label="Search"
-              />
-              <a href="#search" class="mx-2"
-                ><button type="submit" class="btn btn-outline-secondary">
-                  <i class="bi bi-search"></i></button
-              ></a>
+             
               <button
                 type="button"
                 class="btn btn-outline-secondary dropdown-toggle"

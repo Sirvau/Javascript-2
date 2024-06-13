@@ -5,4 +5,6 @@ export const apiV2_AuthUrl = "/auth";
 export const apiV2_RegisterUrl = "/register";
 export const apiV2_LogInUrl = "/login";
 export const apiV2_Posts = "/social/posts";
+export const apiV2_Search = '/auction/listings/search';
+
 
