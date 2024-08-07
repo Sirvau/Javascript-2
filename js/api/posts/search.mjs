@@ -1,4 +1,5 @@
 import { apiV2_BaseUrl, apiV2_Search } from "../constants.mjs";
+import { authFetch } from "../fetch.mjs";
 
 export async function searchPost(value) {
     try {
@@ -8,11 +9,11 @@ export async function searchPost(value) {
   
       console.log(searchURL);
   
-      const response = await fetch(searchURL);
-      const result = response.json();
+      const response = await authFetch(searchURL);
+      const result = await response.json();
   
       if (response.ok) {
-        return await result;
+        return result;
       } else {
         throw new Error(response.status);
       }

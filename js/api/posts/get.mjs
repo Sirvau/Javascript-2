@@ -1,5 +1,5 @@
 
-import {apiV2_BaseUrl, apiKey, apiV2_Posts} from "../constants.mjs";
+import {apiV2_BaseUrl, apiV2_Posts} from "../constants.mjs";
 import { authFetch } from "../fetch.mjs";
 
 
