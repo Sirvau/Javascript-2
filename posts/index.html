@@ -113,22 +113,27 @@
         <div class="tab-content text-light" id="nav-tab-content">
           <div
             class="tab-pane fade show active p-3"
-            id="nav-feed"
+           
             role="tabpanel"
             aria-labelledby="nav-feed-tab"
           >
+          <form id="search-form" class="d-flex col-12 col-md-6 input-group" role="search">
+            <input
+              class="form-control me-2 placeholder bg-light secondary-font"
+              name="search"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              <span class="d-none">Search</span>
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+
+
             <div class="input-group">
-              <input
-                id="search"
-                class="form-control me-2 placeholder bg-light secondary-font"
-                type="search"
-                placeholder="E.g. locations, seasons ..."
-                aria-label="Search"
-              />
-              <a href="#search" class="mx-2"
-                ><button type="submit" class="btn btn-outline-secondary">
-                  <i class="bi bi-search"></i></button
-              ></a>
+             
               <button
                 type="button"
                 class="btn btn-outline-secondary dropdown-toggle"
@@ -140,26 +145,33 @@
               </button>
               <ul class="dropdown-menu dropdown-menu-end">
                 <li>
-                  <a class="dropdown-item text-light secondary-font" href="#"
-                    >Newest</a
+                  <a id="alt-1-filter-button" class="dropdown-item text-light secondary-font" href="/posts/"
+                    >All Posts</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item text-light secondary-font" href="#"
-                    >Oldest</a
+                  <a id="alt-2-filter-button" class="dropdown-item text-light secondary-font" href="/posts/?_tag=mountain"
+                    >Mountain</a
                   >
                 </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
-                  <a class="dropdown-item text-light secondary-font" href="#"
-                    >Most popular</a
+                  <a id="alt-3-filter-button" class="dropdown-item text-light secondary-font" href="/posts/?_tag=forest"
+                    >Forest</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a id="alt-4-filter-button" class="dropdown-item text-light secondary-font" href="/posts/?_tag=beach"
+                    >Beach</a
                   >
                 </li>
               </ul>
             </div>
 
             <h1 class="primary-font h2 my-5">Find your next hike</h1>
+            <section id="nav-feed"></section>
           
 
             <!--  --------------------------------------List of Posts --------containerid= nav-feed------------------------------------------------------------------------ -->
