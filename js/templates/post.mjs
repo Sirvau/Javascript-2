@@ -10,6 +10,7 @@ const defaultProfileImageUrl = 'https://images.unsplash.com/photo-1516724562728-
 
 
 export function postTemplate(postData) {
+    
     const title = postData.title;
     const bodyText = postData.body;
     const postImageUrl = postData.media && postData.media.url ?postData.media.url : defaultProfileImageUrl;
@@ -49,16 +50,19 @@ export function postTemplate(postData) {
 
 
 post.append(postImageAndTagContainer,postTitleAndBodyContainer )
+
     
  return post;
+ 
 }
 
-export async function renderPostTemplate(postsData, parent) {
-    postsData.forEach(postData => {
-        const postElement = postTemplate(postData);
+export async function renderPostTemplate(postData, parent) {
+    postData.forEach((post) => {
+        const postElement = postTemplate(post);
         parent.appendChild(postElement);
     });
 }
+
 
 export async function displayAllPosts() {
     const posts = await postMethods.getPosts();
