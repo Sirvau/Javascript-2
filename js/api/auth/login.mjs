@@ -3,6 +3,18 @@ import { save } from "../../storage/localstorage.mjs";
 import { headers } from "../headers.mjs";
 
 
+/**
+ * Sending a POST request containing email and password values to the login API endpoint. 
+ * If successful, saves the token and profile in local storage and redirects to the profile page.
+ * @param {string} email - The email adress of the user.
+ * @param {string} password - The password of the user
+ * @returns {Promise<Object>} A promise that resolves to the user's profile data. 
+ * @throws {Error} Throws an error if the login request fails.
+ * @example 
+ * loginUser('user@example.com', 'passwordExample123')
+  .then(profile => console.log(profile))
+  .catch(error => console.error(error));
+ */
 
 
 //Log In User

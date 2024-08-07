@@ -6,8 +6,6 @@ const action = `${apiV2_Posts}`;
 const method = "POST";
 
 
-
-
 export async function createPost(postData) {
 const createPostUrl = `${apiV2_BaseUrl}`+ action;
 try {

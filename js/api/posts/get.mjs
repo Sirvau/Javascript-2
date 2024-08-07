@@ -4,10 +4,7 @@ import { authFetch } from "../fetch.mjs";
 
 
 
-
 const action = `${apiV2_Posts}`;
-
-
 
 export async function getPosts() {
 const searchParams = new URLSearchParams(window.location.search);
