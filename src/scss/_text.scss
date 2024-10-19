@@ -1,0 +1,29 @@
+// Typography
+
+$primary-font: "Julius Sans One";
+$secondary-font: "Lato";
+$figcaption-font: "Bad Script";
+
+
+.primary-font {
+    font-family: $primary-font;
+}
+
+.secondary-font {
+    font-family: $secondary-font;
+    font-weight: 400;
+}
+
+.figcaption-font {
+  font-family: $figcaption-font;
+}
+
+
+$headings-font-weight:        500 ;
+
+$display-font-weight: 300 ;
+
+.nav-link:hover{
+  text-decoration: underline;
+ }
+
