@@ -1,7 +1,7 @@
-// import { homepage } from "./routes/home.mjs";
+ import { homepage } from "./routes/home.mjs";
 
 
 
-// homepage();
+ homepage();
 
 
