@@ -1,8 +1,12 @@
-
 import { onAuth } from "../events/onAuth.mjs";
 
-//Auth Listener
+// Auth Listener
 export function setAuthListener() {
-    document.forms.auth.addEventListener("submit", onAuth);
-} 
-
+    const form = document.querySelector("form");
+    
+    if (form) {  
+        form.addEventListener("submit", onAuth);
+    } else {
+        console.error("Form element not found on this page");
+    }
+}
