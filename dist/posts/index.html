@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed | Hikes Inspire</title>
+    <meta
+      name="description"
+      content="Get inspired and post your favourite hikes on Hikes Inspire feed page."
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Julius+Sans+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/81a562339c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/index.css" />
+    <script defer type="module" src="../js/index.mjs"></script>
+    <script defer type="module" src="../js/routes/post-feed.mjs"></script>
+    <script defer type="module" src="../js/routes/logout.mjs"></script>
+  
+
+  </head>
+  <body>
+    <header class="bg-primary container-fluid header mt-5" id="header-feed">
+      <nav class="navbar navbar-expand-lg col-md-12 col-xxl-11 " data-bs-theme="dark">
+        <div class="container-fluid col-md-9 col-lg-12 col-xl-11 col-xxl-9">
+          <a
+            class="navbar-brand text-light d-flex justify-content-center align-items-center"
+            href="../profile/index.html"
+          >
+            <img
+              src="../images/mdi_foot-print.png"
+              class="d-inline-block align-center"
+              alt="Footprint logo linking to home page"
+            />
+            <h1 class="primary-font uppercase ">Hikes Inspire</h1></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item d-flex justify-content-end">
+                <a
+                id="logout-button"
+                  class="nav-link text-light mx-lg-2"
+                  aria-current="page"
+                  href="#"
+                  >Log Out</a
+                >
+              </li>
+              <li class="nav-item d-flex justify-content-end mx-lg-2">
+                <a class="nav-link active text-light" href="../posts/index.html">Feed</a>
+              </li>
+              <li class="nav-item d-flex justify-content-end mx-lg-2">
+                <a class="nav-link text-light" href="../profile/index.html">My Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container my-5">
+        <nav>
+          <div class="nav nav-tabs primary-font mt-5 mb-3" id="nav-tab" role="tablist">
+            <button
+              class="nav-link active text-light"
+              id="nav-feed-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-feed"
+              role="tab"
+              aria-controls="nav-feed"
+              aria-selected="true"
+            >
+              Hikes feed
+            </button>
+            <button
+              class="nav-link text-light"
+              id="nav-post-tab"
+              data-bs-toggle="tab"
+              data-bs-target="#nav-post"
+              role="tab"
+              aria-controls="nav-post"
+              aria-selected="true"
+            >
+              Post my hike
+            </button>
+          </div>
+        </nav>
+
+        <!--  -------------------------------------------------------------------------------------------------------------------------- -->
+
+        <div class="tab-content text-light" id="nav-tab-content">
+          <!-- Hike inspo tab content -->
+          <div
+            class="tab-pane fade show active py-3"
+            id="nav-feed"
+            role="tabpanel"
+            aria-labelledby="nav-feed-tab"
+          >
+          <form id="search-form" class="d-flex col-12 col-md-6 input-group" role="search">
+            <input
+              class="form-control me-2 placeholder bg-light secondary-font"
+              name="search"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-secondary" type="submit">
+              <span class="d-none">Search</span>
+              <i class="bi bi-search"></i>
+            </button>
+       
+             
+              <button
+                type="button"
+                class="btn btn-outline-secondary dropdown-toggle align-items-center "
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Toggle Dropdown</span>
+                <i class="bi bi-filter"></i>
+              </button>
+              <ul id="filter-dropdown-menu" class="dropdown-menu dropdown-menu-end">
+                <li>
+                  <a id="alt-1-filter-button" class="dropdown-item text-light secondary-font filter-button" href="/posts/"
+                    >All Posts</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a id="alt-2-filter-button" class="dropdown-item text-light secondary-font filter-button" href="/posts/?_tag=mountain"
+                    >Mountain</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a id="alt-3-filter-button" class="dropdown-item text-light secondary-font filter-button" href="/posts/?_tag=forest"
+                    >Forest</a
+                  >
+                </li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a id="alt-4-filter-button" class="dropdown-item text-light secondary-font filter-button" href="/posts/?_tag=beach"
+                    >Beach</a
+                  >
+                </li>
+              </ul>
+           
+          </form>
+        
+            <section id="nav-feed" class="container pt-5"></section>
+          </div>
+          
+          <!-- Post my hike tab content -->
+          <div
+            class="tab-pane fade p-3"
+            id="nav-post"
+            role="tabpanel"
+            aria-labelledby="nav-post-tab"
+          >
+          
+            <div class="d-flex row align-items-md-center justify-content-md-center">
+             
+              <section class="d-flex flex-column col-md-8  mt-1">
+                <form
+                id="create-post"
+                method="post"
+                action="#"
+                class="form-style text-start container needs-validation"
+                novalidate
+              >
+                <div class="row justify-content-center ">
+                  <div class="col-10 col-sm-8 col-md-6 col-lg-5 col-xl-4">
+          
+              
+                    <!-- Title -->
+                    <div class="form">
+                      <label for="title" class="form-label text-light">Title</label>
+                      <input
+                        type="text"
+                        name="title"
+                        id="title"
+                        required
+                        minlength="3"
+                        class="form-control text-light mb-1"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Please enter the title of your post"
+                   
+                      />
+                    
+                      <div class="invalid-feedback">
+                        Please enter a title that is at least 3 characters long.
+                      </div>
+                    </div>
+              
+                    <!-- Body -->
+                    <div class="form">  
+                      <label for="body" class="form-label text-light">Description</label>
+                      <textarea
+                        name="body"
+                        id="body"
+                        rows="5"
+                        required
+                        minlength="20"
+                        class="form-control text-light mb-1"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Please enter some body text for your post."
+               
+                      ></textarea>
+                     
+                      <div class="invalid-feedback">
+                        Please enter a description that is at least 20 characters long.
+                      </div>
+                    </div>
+              
+                    <!-- Tags -->
+                    <div class="form">
+                      <label for="tags" class="form-label text-light">Tags</label>
+                      <input
+                        type="text"
+                        name="tags"
+                        id="tags"
+                        class="form-control text-light mb-1" />
+                    </div>
+              
+                    <!-- Media -->
+                    <div class="form">
+                      <label for="media" class="form-label text-light">Media url</label>
+                      <input
+                        type="url"
+                        name="media"
+                        id="media"
+                        class="form-control text-light mb-1"
+                        required
+                         />
+                      <div class="invalid-feedback">
+                        Please enter a fully formed url, linked to a live and publicly accessible image.
+                      </div>
+                    </div>
+              
+                    <!-- Submit Button -->
+                    <div class="text-center mt-4">
+                      <button type="submit" class="btn w-100 px-5 py-2 text-bg-info text-dark fw-semibold">Post hike</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              
+              </section>
+            </div>
+          </div>
+        </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+      class="d-flex justify-content-center mb-5 to-top-button-container"
+    ></div>
+    </main>
+    <footer class="bg-secondary pt-5">
+      <div class="social d-flex col justify-content-center my-5">
+        <a href="https://www.instagram.com/"
+          ><i class="fa-brands fa-instagram fa-lg mx-3"></i></a
+        ><a href="https://www.snapchat.com/"
+          ><i class="fa-brands fa-snapchat fa-lg mx-3"></i></a
+        ><a href="https://twitter.com/"
+          ><i class="fa-brands fa-x-twitter mx-3"></i></a
+        ><a href="https://www.facebook.com/"
+          ><i class="fa-brands fa-facebook mx-3"></i
+        ></a>
+      </div>
+      <p class="copyright text-center mt-5 pb-3 fst-italic">Hikes Inspire © 2024</p>
+    </footer>
+  </body>
+</html>

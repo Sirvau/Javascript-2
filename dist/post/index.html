@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Post | Hikes Inspire</title>
+    <meta
+      name="description"
+      content="Your personal profile page on Hikes Inspire."
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Julius+Sans+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/81a562339c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../css/index.css" />
+    <script defer type="module" src="../js/index.mjs"></script>
+    <script defer type="module" src="../js/routes/single-post.mjs"></script>
+    <script defer type="module" src="../js/routes/logout.mjs"></script>
+  </head>
+  <body>
+    <header class="bg-primary container-fluid mt-5" id="header-single-post">
+      <nav
+        class="navbar navbar-expand-lg col-md-12 col-xxl-11"
+        data-bs-theme="dark"
+      >
+        <div class="container-fluid col-md-9 col-lg-12 col-xl-11 col-xxl-10">
+          <a
+            class="navbar-brand text-light d-flex justify-content-center align-items-center"
+            href="/posts/"
+          >
+            <img
+              src="../images/mdi_foot-print.png"
+              class="d-inline-block align-center"
+              alt="Footprint logo linking to home page"
+            />
+            <h1 class="primary-font uppercase">Hikes Inspire</h1></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item d-flex justify-content-end mx-lg-2">
+                <a
+                  id="logout-button"
+                  class="nav-link text-light"
+                  aria-current="page"
+                  href="#"
+                  >Log Out</a
+                >
+              </li>
+              <li class="nav-item d-flex justify-content-end mx-lg-2">
+                <a class="nav-link active text-light" href="/posts/">Feed</a>
+              </li>
+              <li class="nav-item d-flex justify-content-end mx-lg-2">
+                <a class="nav-link text-light" href="/profile/">My Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Single Post area -->
+
+      <section id="single-post-main-container" class="container my-5">
+        <div
+          id="single-post-container"
+          class="row d-flex justify-content-center justify-content-sm-around"
+        >
+          <div id="single-post" class="col-12 col-md-6"></div>
+        </div>
+      </section>
+      <section id="post-handeling-buttons" class="container">
+        <div class="container d-flex flex-column mt-1 col-12 col-md-6">
+          <button
+            id="link-to-update-post"
+            class="row btn bg-info fw-semibold text-dark"
+          >
+            Update Post
+          </button>
+          <button
+            id="link-to-remove-post"
+            class="row btn border-info fw-semibold text-light mt-4"
+          >
+            Remove Post
+          </button>
+        </div>
+      </section>
+
+      <!-- To top Button -->
+      <div
+        class="d-flex justify-content-center my-5 py-5 to-top-button-container"
+      ></div>
+    </main>
+    <footer class="bg-secondary pt-5">
+      <div class="social d-flex col justify-content-center my-5">
+        <a href="https://www.instagram.com/"
+          ><i class="fa-brands fa-instagram fa-lg mx-3"></i></a
+        ><a href="https://www.snapchat.com/"
+          ><i class="fa-brands fa-snapchat fa-lg mx-3"></i></a
+        ><a href="https://twitter.com/"
+          ><i class="fa-brands fa-x-twitter mx-3"></i></a
+        ><a href="https://www.facebook.com/"
+          ><i class="fa-brands fa-facebook mx-3"></i
+        ></a>
+      </div>
+      <p class="copyright text-center mt-5 pb-3 fst-italic">
+        Hikes Inspire © 2024
+      </p>
+    </footer>
+  </body>
+</html>
