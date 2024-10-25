@@ -1,12 +1,9 @@
-// Variables
-
-
 // Custom theme colors
 $blue:    #011B1C; 
 $orange:  #BB7703;
-$green:   #197958;
+$green:   #207759;
 $cyan:    #AAC7D0 ;
-$light:   #D3DDE0;
+$light:   #AAC7D0;
 $dark:    #33454F;
 
 // theme-color-variables
@@ -14,8 +11,6 @@ $primary: $blue;
 $secondary: $green;
 $warning: $orange;
 $info: $cyan;
-$success:  $pink ;
-$danger:   $red ;
 $light:     $light;
 $dark:      $dark;
 
@@ -24,10 +19,8 @@ $dark:      $dark;
 $theme-colors: (
   "primary":    $primary,
   "secondary":  $secondary,
-  "success":    $success,
   "info":       $info,
   "warning":    $warning,
-  "danger":     $danger,
   "light":      $light,
   "dark":       $dark
 ) ;
@@ -42,39 +35,16 @@ $link-color:                $primary ;
 $link-decoration:           none ;
 
 
+
 //Borders
 $border-color:                $secondary ;
 
-//Components
 $component-active-color:      $light ;
 $component-active-bg:         $primary ;
 
 
-// Typography
-
-$primary-font: "Julius Sans One";
-$secondary-font: "Lato";
-$figcaption-font: "Bad Script";
-
-
-.primary-font {
-    font-family: $primary-font;
+#alt-1-filter-button:hover, #alt-2-filter-button:hover, #alt-3-filter-button:hover, #alt-4-filter-button:hover {
+  background-color: #197958;
 }
-
-.secondary-font {
-    font-family: $secondary-font;
-    font-weight: 400;
-}
-
-.figcaption-font {
-  font-family: $figcaption-font;
-}
-
-
-$headings-font-weight:        500 ;
-
-$display-font-weight: 300 ;
-
-
 
 
